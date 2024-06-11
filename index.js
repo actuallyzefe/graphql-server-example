@@ -92,7 +92,7 @@ export const resolvers = {
       try {
         const influencer = new Influencer({ name, surname, nickname, gender });
 
-        return influencer;
+        return influencer.save();
       } catch (err) {
         console.log(err);
         return null;
@@ -121,7 +121,7 @@ export const resolvers = {
           comments,
           takenAt,
         });
-        return post;
+        return post.save();
       } catch (err) {
         console.log(err);
         return null;
@@ -137,7 +137,7 @@ export const resolvers = {
           postId,
         });
 
-        return product;
+        return product.save();
       } catch (err) {
         console.log(err);
         return null;
